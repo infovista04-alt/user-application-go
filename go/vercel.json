@@ -1,16 +1,15 @@
 {
-  "$schema": "https://openapi.vercel.sh/vercel.json",
   "version": 2,
   "builds": [
     {
-      "src": "api/*.go",
+      "src": "api/index.go",
       "use": "@vercel/go"
     }
   ],
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "api/$1"
+      "dest": "api/index.go"
     }
   ]
 }
